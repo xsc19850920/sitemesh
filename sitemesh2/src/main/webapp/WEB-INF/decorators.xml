@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sitemesh 2.4 配置  -->
+<decorators defaultdir="/layouts/">
+ <!-- 不需要过滤的请求 -->
+ <excludes>
+  <pattern>/static/*</pattern>
+  <pattern>/remote/*</pattern>
+ </excludes>
+ <!-- 定义默认装饰器要过滤的页面 默认的页面不用写，只要满足匹配允许会自动装饰 -->
+ <decorator name="default" page="default.jsp">
+  <pattern>/*</pattern>
+ </decorator>
+ 
+ 
+ <!-- 自定义装饰页面, 在需要装饰的页面增加<meta name="decorator" content="multi"/> -->
+ <!--  定义多种装饰器的类型-->
+ <decorator name="multi" page="multi.jsp">
+  <pattern>/admin</pattern>
+ </decorator>
+ 
+</decorators>
